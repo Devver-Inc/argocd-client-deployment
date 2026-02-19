@@ -1,7 +1,7 @@
 # Configuration de l'organisation et du projet
 organization:
   name: "org1"  # Nom de l'organisation
-  domain: "k8s.devver.app"  # Domaine principal
+  domain: "devver.app"  # Domaine principal
 
 project:
   name: "proj1"  # Nom du projet
