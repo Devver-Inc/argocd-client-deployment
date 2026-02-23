@@ -1,0 +1,47 @@
+# Configuration de l'organisation et du projet
+organization:
+  name: "devver"  # Nom de l'organisation
+  domain: "devver.app"  # Domaine principal
+
+project:
+  name: "postgres-db"  # Nom du projet
+
+# Configuration du conteneur (OS Linux complet ou application)
+container:
+  image: "postgres:15-alpine"  # Image du conteneur (OS Linux ou application)
+  port: 5432  # Port exposé par le conteneur
+  type: "app"
+  
+  command: []
+  
+  args: []
+
+# Configuration des ressources
+resources:
+  requests:
+    memory: "512Mi"
+    cpu: "500m"
+  limits:
+    memory: "1Gi"
+    cpu: "1000m"
+
+# Configuration de la persistance
+persistence:
+  enabled: true
+  size: "50Gi"
+  mountPath: "/var/lib/postgresql/data"  # Choix du répertoire à persister
+
+# Configuration du nombre de replicas
+replicaCount: 1
+
+# Configuration des ports
+ports:
+  http: 5432
+  https: 5432
+
+# Labels et sélecteurs additionnels
+labels: app: postgres
+environment: production
+type: database
+annotations: description: PostgreSQL database deployment
+backup: enabled
