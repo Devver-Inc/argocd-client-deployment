@@ -1,15 +1,15 @@
 # Configuration de l'organisation et du projet
 organization:
-  name: "orgt2"  # Nom de l'organisation
+  name: "orgtest"  # Nom de l'organisation
   domain: "devver.app"  # Domaine principal
 
 project:
-  name: "projt2"  # Nom du projet
+  name: "projtest"  # Nom du projet
   #displayName: "projtest"  # Nom d'affichage
 
 # Configuration du conteneur (OS Linux complet ou application)
 container:
-  image: "ghcr.io/Devver-Inc/deploy-agent:latest"  # Image du conteneur (OS Linux ou application)
+  image: "ubuntu/nginx"  # Image du conteneur (OS Linux ou application)
   port: 80  # Port exposé par le conteneur
   type: "app"
   
