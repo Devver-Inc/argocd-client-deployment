@@ -7,6 +7,9 @@ project:
   name: "projt2"  # Nom du projet
   #displayName: "projtest"  # Nom d'affichage
 
+imagePullSecrets:
+  - name: ghcr-secret
+
 # Configuration du conteneur (OS Linux complet ou application)
 container:
   image: "ghcr.io/devver-inc/deploy-agent:latest"  # Image du conteneur (OS Linux ou application)
