@@ -25,11 +25,11 @@ container:
 # Configuration des ressources
 resources:
   requests:
-    memory: "128Mi"
-    cpu: "100m"
+    memory: "512Mi"
+    cpu: "0.5"
   limits:
-    memory: "128Mi"
-    cpu: "100m"
+    memory: "512Mi"
+    cpu: "0.5"
 
 # Configuration de la persistance
 persistence:
