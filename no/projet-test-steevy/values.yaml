@@ -17,8 +17,8 @@ container:
     DEVVER_WIDGET_URL: "https://cdn.jsdelivr.net/gh/Devver-Inc/overlay@main/public/devver-overlay.iife.js"
 resources:
   requests:
-    memory: "128Mi"
-    cpu: "100m"
+    memory: "512Mi"
+    cpu: "500m"
   limits:
     memory: "2048Mi"
     cpu: "2000m"
