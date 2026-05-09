@@ -14,6 +14,7 @@ container:
   env:
     DEVVER_SECRET: dev-secret-123
     NODE_ENV: production
+    DEVVER_MONGO_TLS_ALLOW_INVALID_CERTIFICATES: true
     DEVVER_WIDGET_URL: >-
       https://cdn.jsdelivr.net/gh/Devver-Inc/overlay@dev/public/devver-overlay.iife.js
 resources:
