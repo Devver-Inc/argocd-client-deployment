@@ -27,11 +27,11 @@ persistence:
   app:
     size: "10Gi"
     mountPath: "/app"
-    storageClass: longhorn
+    storageClass: nfs-devver-prod
   root:
     size: "5Gi"
     mountPath: "/root"
-    storageClass: longhorn
+    storageClass: nfs-devver-prod
 replicaCount: 1
 ports:
   http: 80
