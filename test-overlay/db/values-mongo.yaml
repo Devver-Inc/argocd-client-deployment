@@ -11,7 +11,7 @@ auth:
 replicaCount: 1
 persistence:
   size: 5Gi
-  storageClass: longhorn
+  storageClass: nfs-devver-prod
 resources:
   requests:
     memory: 512Mi
