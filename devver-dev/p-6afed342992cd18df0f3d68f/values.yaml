@@ -1,0 +1,44 @@
+organization:
+  id: 4g89zxzzj7cj
+  name: gabriel
+project:
+  id: 6afed342992cd18df0f3d68f
+  name: fullstack
+imagePullSecrets:
+  - name: ghcr-secret
+container:
+  port: 80
+  type: app
+  command: []
+  args: []
+  env:
+    DEVVER_PROJECT_ID: 6afed342992cd18df0f3d68f
+    DEVVER_ORGANIZATION_ID: 4g89zxzzj7cj
+    DEVVER_PREVIEW_DOMAIN: preview.dev.devver.app
+    DEVVER_WIDGET_URL: >-
+      https://cdn.jsdelivr.net/gh/Devver-Inc/overlay@dev/public/devver-overlay.iife.js
+    DEVVER_BACKEND_URL: >-
+      http://backend-service.devver-backend-service.svc.cluster.local:3000/api/v1
+resources:
+  requests:
+    memory: 1024Mi
+    cpu: 1000m
+  limits:
+    memory: 2Gi
+    cpu: 2000m
+persistence:
+  enabled: true
+  app:
+    size: 5Gi
+    mountPath: /app
+    storageClass: nfs-devver-prod
+  root:
+    size: 5Gi
+    mountPath: /root
+    storageClass: nfs-devver-prod
+replicaCount: 1
+ports:
+  http: 80
+  https: 443
+labels: {}
+annotations: {}
