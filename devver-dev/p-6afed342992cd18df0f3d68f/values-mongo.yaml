@@ -1,0 +1,16 @@
+namespace:
+  create: false
+project:
+  id: 6afed342992cd18df0f3d68f
+  name: fullstack
+replicaCount: 1
+persistence:
+  size: 1Gi
+  storageClass: nfs-devver-prod
+resources:
+  requests:
+    memory: 512Mi
+    cpu: 500m
+  limits:
+    memory: 1Gi
+    cpu: 500m
